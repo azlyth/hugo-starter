@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  hugo:
+    labels:
+      shipyard.route: '/'
+    build: '.'
+    command: ['hugo', 'server', '--bind=0.0.0.0', '--port=1313']
+    ports:
+      - '1313:1313'
